@@ -29,9 +29,10 @@ const googleSignInStyles = css`
   color: white;
   border: none;
 
+
   &:hover {
     background-color: #357ae8;
-    border: 1px solid #357ae8;
+    border: 1px solid #3545a8;
   }
 `;
 
