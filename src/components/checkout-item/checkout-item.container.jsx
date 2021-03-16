@@ -1,6 +1,7 @@
 import React from 'react';
-import { compose, graphql } from 'react-apollo';
-import { gql } from 'apollo-boost';
+import { flowRight as compose } from 'lodash';
+import { graphql } from '@apollo/client/react/hoc';
+import { gql } from '@apollo/client';
 
 import CheckoutItem from './checkout-item.component';
 
@@ -30,9 +31,9 @@ const CollectionItemContainer = ({
 }) => (
   <CheckoutItem
     {...otherProps}
-    addItem={item => addItemToCart({ variables: { item } })}
-    removeItem={item => removeItemFromCart({ variables: { item } })}
-    clearItem={item => clearItemFromCart({ variables: { item } })}
+    addItem={(item) => addItemToCart({ variables: { item } })}
+    removeItem={(item) => removeItemFromCart({ variables: { item } })}
+    clearItem={(item) => clearItemFromCart({ variables: { item } })}
   />
 );
 

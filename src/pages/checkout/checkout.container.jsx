@@ -1,6 +1,6 @@
 import React from 'react';
-import { Query } from 'react-apollo';
-import { gql } from 'apollo-boost';
+
+import { gql, useQuery } from '@apollo/client';
 
 import CheckoutPage from './checkout.component';
 
@@ -11,12 +11,12 @@ const GET_CART_ITEMS_AND_TOTAL = gql`
   }
 `;
 
-const CheckoutPageContainer = () => (
-  <Query query={GET_CART_ITEMS_AND_TOTAL}>
-    {({ data: { cartItems, cartTotal } }) => (
-      <CheckoutPage cartItems={cartItems} total={cartTotal} />
-    )}
-  </Query>
-);
+const CheckoutPageContainer = () => {
+  const {
+    data: { cartItems, cartTotal },
+  } = useQuery(GET_CART_ITEMS_AND_TOTAL);
+
+  return <CheckoutPage cartItems={cartItems} total={cartTotal} />;
+};
 
 export default CheckoutPageContainer;

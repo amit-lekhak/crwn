@@ -1,4 +1,4 @@
-import { gql } from 'apollo-boost';
+import { gql } from '@apollo/client';
 
 import {
   addItemToCart,
@@ -34,31 +34,31 @@ export const typeDefs = gql`
   }
 `;
 
-const GET_CART_HIDDEN = gql`
+export const GET_CART_HIDDEN = gql`
   {
     cartHidden @client
   }
 `;
 
-const GET_ITEM_COUNT = gql`
+export const GET_ITEM_COUNT = gql`
   {
     itemCount @client
   }
 `;
 
-const GET_CART_TOTAL = gql`
+export const GET_CART_TOTAL = gql`
   {
     cartTotal @client
   }
 `;
 
-const GET_CART_ITEMS = gql`
+export const GET_CART_ITEMS = gql`
   {
     cartItems @client
   }
 `;
 
-const GET_CURRENT_USER = gql`
+export const GET_CURRENT_USER = gql`
   {
     currentUser @client
   }

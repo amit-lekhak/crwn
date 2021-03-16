@@ -1,7 +1,7 @@
 import React from 'react';
-import { compose, graphql } from 'react-apollo';
-import { gql } from 'apollo-boost';
-
+import { gql } from '@apollo/client';
+import { flowRight as compose } from 'lodash';
+import { graphql } from '@apollo/client/react/hoc';
 import CartIcon from './cart-icon.component';
 
 const TOGGLE_CART_HIDDEN = gql`
