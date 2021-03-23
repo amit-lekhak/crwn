@@ -1,6 +1,7 @@
 # Crwn E-commerce Project
 
-> A E-commerce site built with Node.js, React, Redux, Express, Firebase
+> A E-commerce site built with React, Express and Firebase.
+> It showcases the use of redux, redux-thunk, redux-saga, redux-persist, Payment with Stripe, Styled components, PWA, ContextApi, Graphql and testing with jest and enzyme
 
 
 ### Deployed At
