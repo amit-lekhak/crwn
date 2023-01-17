@@ -5,7 +5,7 @@
 
 
 ### Deployed At
- > https://crwn-go.herokuapp.com/
+ > https://crwn.onrender.com
 
 
 ### Env Variables
